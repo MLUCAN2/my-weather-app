@@ -1,0 +1,11 @@
+.header-container{
+    display: flex;
+    margin: 15px;
+    padding-left: 20px;
+    background-color: grey;
+    border-bottom: 2px solid black;
+
+}
+.card{
+    margin:15px
+}
