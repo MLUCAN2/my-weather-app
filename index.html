@@ -16,31 +16,56 @@
   <header class="header-container">
     <h1>myWeather App</h1>
   </header>
-  <main class="flex-row justify-space-between">
+  <main class="container">
+    <div class="row">
     <div class="col-12 col-md-3">
 <!-- Section for the search -->
       <section class="card">
         <h3 class="card header">Search by city:</h3>
         <form id="city-input" class="card-body">
-          <label class="form-label" for="city">City:</label>
-          <input name="city" id="city" type="text" class="form-input"/>
+          <label 
+          class="form-label" 
+          for="city">City:</label>
+          <input 
+          name="city" 
+          id="city" 
+          type="text" 
+          class="form-input"/>
           <button type="submit" class="btn">Search</button>
         </form>
       </section>
-<!-- Empty section to allow content to fill in itself -->
+
       <section class="card">
-        <h3 class="card-header">Your saved cities:</h3>
-        <section class="cities"></section>
-
+        <h3 class="card-header">Saved Cities:</h3>
+        <section class="card-body">
+          <ul id="saved-cities" class="saved-cities-list">
+<!-- Empty section to allow content to fill in itself -->
+          </ul>
+        </section> 
       </section>
-
-
     </div> 
-
+    <section class="col-12 col-md-9">
+      <div class="searched-weather-data" id="searched-weather-data">
+        <h3 class="card-header" id="city-weather-data">Enter city name in the search form for today's weather!</h3>
+        <div id="weather-icon"></div>
+        <div id="weather-data">
+        <!-- content to fill in here -->
+        </div>
+      </div>
+    
+      <div class="five-day-forecast" id="five-day-forecast">
+        <h3 class="card-header">Enter city name in the search form for the five day forecast!</h3>
+        <div id="forecast">
+        <!-- content to fill in here -->
+        </div>
+      </div>
+    </section>
+  </div> 
   </main>
   
-
-  <script src="./assets/script.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+  <script src="./assets/style.js"></script>
 </body>
 
 </html>

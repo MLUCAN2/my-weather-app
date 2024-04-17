@@ -9,3 +9,22 @@
 .card{
     margin:15px
 }
+
+
+#city-weather-data{
+    display: flex;
+}
+.searched-weather-data{
+    background-color: grey;
+    border: 6px solid black;
+    padding: 6px;
+}
+.five-day-forecast{
+    background-color: grey;
+    border: 6px solid black;
+    margin-top: 6px;
+    padding: 6px;
+}
+.card-header{
+    border-bottom: 6px solid black;
+}
