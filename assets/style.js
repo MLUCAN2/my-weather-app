@@ -21,10 +21,12 @@ fetch(url)
         }
         return response.json();
     })
+    // Ensure info gets passed to the right functions
     .then(data => {
         localStorage.setItem("weather",JSON.stringify(data));
         console.log(data);
         displayWeatherData(data);
+        displayForecastData(data);
         })
     
     .catch (error =>{
@@ -76,10 +78,45 @@ function displayWeatherData(data){
     });
 }
 
-// 5-Day Forecast Section
+// 5-Day Forecast Section (wanted to try writing in the actual html in this script)
 function displayForecastData(data){
-    const forecastdata= document.getElementById('forecast');
-    forecastdata.innerHTML= "";
+    console.log('Forecast data:', data)
+    const forecastContainer= document.getElementById('five-day-forecast');
+    forecastContainer.innerHTML= "";
+
+
+
+    for (let i= 0; i < 5; i++){
+        const forecastItem= data.list[i * 8];
+        console.log('Forecast item', i +1, ':', forecastItem);
+        const date = new Date(forecastItem.dt * 1000);
+        const temperatureK = (forecastItem.main.temp);
+        const temperatureF= convertKToF(temperatureK)
+        console.log (temperatureK + 'K')
+        const milesPerS = forecastItem.wind.speed;
+        const milesPerH= convertMpstoMph(milesPerS);
+        console.log (milesPerS + 'm/s')
+        const humidity = forecastItem.main.humidity;
+        const icon= forecastItem.weather[0].icon;
+
+        const card=document.createElement('div')
+        card.classList.add ('card');
+
+        const cardBody= document.createElement('div');
+        cardBody.classList.add('card-body');
+
+        cardBody.innerHTML= `
+            <h3 class= "card-title">${date.toLocaleDateString()}</h3>
+            <img src= "https://openweathermap.org/img/wn/${icon}.png">
+            <p class= "card-text">Temperature: ${temperatureF} F</p>
+            <p class= "card-text"> Wind Speed: ${milesPerH} m/h
+            <p class= "card-text">Humidity: ${humidity} %</p>`;
+
+        card.appendChild(cardBody);
+        forecastContainer.appendChild(card);
+        
+
+    }
 }
 
 // Conversions for temp and speed

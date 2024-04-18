@@ -3,13 +3,35 @@
     margin: 15px;
     padding-left: 20px;
     background-color: grey;
-    border-bottom: 2px solid black;
+    border-bottom: 6px solid black;
 
 }
-.card{
-    margin:15px
+
+.searched-weather-container{
+    background-color: grey;
+    border: 6px solid black;
+    margin-top: 6px;
+    padding: 6px;
+    color: white;
+}
+.forecast-container{
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    background-color: grey;
+    border: 6px solid black;
+    margin-top: 6px;
+    padding: 6px;
+}
+.form-label{
+    font-weight: bold;
 }
 
+.btn{
+    padding-left: 90px;
+    font-weight: bold;
+    
+}
 
 #city-weather-data{
     display: flex;
@@ -28,3 +50,12 @@
 .card-header{
     border-bottom: 6px solid black;
 }
+
+/* For the JS cards */
+.card{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border: 6px solid black;
+}
+/* End */
