@@ -24,4 +24,4 @@ Open Weather Map (API used): https://api.openweathermap.org/data/2.5/forecast?la
 
 ## License
 
-N/A
+N/A![Screenshot 2024-04-18 191124](https://github.com/MLUCAN2/my-weather-app/assets/162901593/927de502-f18f-4d13-a1fb-c6479752f06d)
