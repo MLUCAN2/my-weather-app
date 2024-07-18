@@ -28,3 +28,5 @@ Open Weather Map (API used): https://api.openweathermap.org/data/2.5/forecast?la
 ## License
 
 N/A
+
+![image](https://github.com/user-attachments/assets/a00a8458-9b38-4975-9f83-c7f7cfe89f3e)
