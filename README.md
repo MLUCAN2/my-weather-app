@@ -11,12 +11,15 @@ N/A
 
 ## Usage
 
-The site includes a search function where the user can input their desired city. When they click submit they can see the day's, as well as, a five day forecast for the weather. The site also features a saved city section that shows the recent searches.  
+The site includes a search function where the user can input their desired city. When they click search they can see the day, as well as, a five day forecast for the weather. The site also features a saved city section that shows the recent searches.
+
+## Features
+
+Includes search bar for city weather, a five day forecast, ability to save and then delete the city from the user's list. 
 
 ## Credits
 
-Bryan Swarthout (Instructor): assisted with the API implementation in JS. 
-Meg Myers (Tutor): assisting with the creation of elements in JS. 
+N/A
 
 ## Databases Used
 
